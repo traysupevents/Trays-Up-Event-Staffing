@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trays Up Event Staffing | Premium Hospitality Staffing for Springfield & Branson</title>
+    <style>
+        /* Modern, Clean CSS Reset & Variables */
+        :root {
+            --bg-dark: #121212;
+            --bg-card: #1e1e1e;
+            --accent-gold: #d4af37;
+            --text-light: #ffffff;
+            --text-muted: #b3b3b3;
+            --border-color: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            border-bottom: 1px solid var(--border-color);
+            background-color: rgba(18, 18, 18, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-img {
+            height: 55px; /* Sized perfectly for the navigation bar */
+            width: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        .nav-ln {
+            background-color: #0077b5;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background-color 0.2s;
+        }
+
+        .nav-ln:hover {
+            background-color: #005582;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 8rem 5% 6rem 5%;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            color: var(--accent-gold);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+        }
+
+        .cta-btn {
+            background-color: var(--accent-gold);
+            color: var(--bg-dark);
+            padding: 0.8rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: transform 0.2s, background-color 0.2s;
+            display: inline-block;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            background-color: #f1c40f;
+        }
+
+        /* Services Grid */
+        .services {
+            padding: 5rem 5%;
+            background-color: #181818;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section-title span {
+            color: var(--accent-gold);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            padding: 2.5rem 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            transition: border-color 0.3s;
+        }
+
+        .card:hover {
+            border-color: var(--accent-gold);
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--accent-gold);
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Contact Form Wrapper */
+        .contact-section {
+            padding: 5rem 5%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-container {
+            background-color: var(--bg-card);
+            padding: 2.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            background-color: var(--bg-dark);
+            border: 1px solid var(--border-color);
+            color: var(--text-light);
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+        }
+
+        .submit-btn {
+            width: 100%;
+            background-color: var(--accent-gold);
+            color: var(--bg-dark);
+            border: none;
+            padding: 1rem;
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .submit-btn:hover {
+            background-color: #f1c40f;
+        }
+
+        /* Footer */
+        footer {
+            padding: 3rem 5%;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-links {
+            margin-bottom: 1.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            header { padding: 1rem 5%; }
+            .logo-img { height: 45px; }
+            .hero h1 { font-size: 2.2rem; }
+            .form-container { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="logo-area">
+            <!-- Official Trays Up Logo Embedded Directly -->
+            <img src="https://scontent-ord5-3.xx.fbcdn.net/v/t39.30808-6/480593833_936577351968377_4440141344819044649_n.jpg?stp=dst-jpg_tt6&cstp=mx900x498&ctp=s900x498&_nc_cat=109&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=R3ZoFRK926sQ7kNvwE-Y_GL&_nc_oc=AdqyRJcjt7ALbd5gNa48pc68a6jCfVbGcpxPkwKDk2E-nXm1S-crKzahRhGnj3sdROM&_nc_zt=23&_nc_ht=scontent-ord5-3.xx&_nc_gid=RH7fzvol-UCTF9U6MaNwTQ&_nc_ss=7b2a8&oh=00_AQBbecO6-Pp9lfW3eltZBZ38s2RM4s9-GvFldzHPCaEBfQ&oe=6A52EC7C" alt="Trays Up Event Staffing Logo" class="logo-img">
+        </div>
+        <a href="https://www.linkedin.com/company/trays-up-event-staffing" target="_blank" class="nav-ln">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M0 1.146C0 .513.52 0 1.146 0h13.708C15.488 0 16 .513 16 1.146v13.708c0 .633-.513 1.146-1.146 1.146H1.146C.52 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+            </svg>
+            LinkedIn
+        </a>
+    </header>
+
+    <!-- Hero / Intro -->
+    <section class="hero">
+        <h1>Premium Hospitality Staffing for <span>Springfield & Branson</span></h1>
+        <p>From high-end corporate functions to private gala receptions, we provide polished, reliable, professional service crews that keep your operations running seamlessly.</p>
+        <a href="#book" class="cta-btn">Book Staff For Your Event</a>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <h2 class="section-title">Our <span>Services</span></h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Professional Bartenders</h3>
+                <p>Mixologists skilled in high-volume settings, craft cocktail curation, and strict alcohol safety compliance.</p>
+            </div>
+            <div class="card">
+                <h3>Elite Service Teams</h3>
+                <p>Polished front-of-house banquet servers trained for synchronized fine dining plated service or seamless buffet maintenance.</p>
+            </div>
+            <div class="card">
+                <h3>Event Captains</h3>
+                <p>Experienced site leads to manage floor logistics, coordinate timing with culinary crews, and lead the service team.</p>
+            </div>
+            <div class="card">
+                <h3>Setup & Tear-Down</h3>
+                <p>Behind-the-scenes support to meticulously map out floor plans before guests arrive and restore spaces instantly post-event.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking / Contact Form Section -->
+    <section class="contact-section" id="book">
+        <h2 class="section-title">Booking <span>Inquiry</span></h2>
+        <div class="form-container">
+            <form action="https://api.web3forms.com/submit" method="POST">
+                
+                <!-- Just remember to swap out YOUR_ACCESS_KEY_HERE with your free key from web3forms.com -->
+                <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                <input type="hidden" name="subject" value="New Event Staffing Booking Inquiry">
+                <input type="checkbox" name="botcheck" id="" style="display: none;">
+
+                <div class="form-group">
+                    <label for="name">Contact Name / Company</label>
+                    <input type="text" id="name" name="name" required placeholder="John Doe / Company Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="name@domain.com">
+                </div>
+                <div class="form-group">
+                    <label for="date">Event Date</label>
+                    <input type="date" id="date" name="event_date" required>
+                </div>
+                <div class="form-group">
+                    <label for="location">Event Location</label>
+                    <select id="location" name="location" required>
+                        <option value="" disabled selected>Select location...</option>
+                        <option value="Branson">Branson Area</option>
+                        <option value="Springfield">Springfield Area</option>
+                        <option value="Other">Other (SW Missouri)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="details">Event Details & Staffing Requirements</label>
+                    <textarea id="details" name="message" rows="5" required placeholder="Tell us about your event format, estimated guest count, and what specific staffing roles you need filled..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit Request</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/company/trays-up-event-staffing" target="_blank">Connect on LinkedIn</a>
+        </div>
+        <p>&copy; 2026 Trays Up Event Staffing. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
