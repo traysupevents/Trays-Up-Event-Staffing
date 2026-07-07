@@ -3,29 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trays Up Event Staffing | Premium Hospitality Staffing for Springfield & Branson</title>
+    <title>Trays Up Event Staffing | Premium Hospitality Teams</title>
     <style>
-        /* Modern, Clean CSS Reset & Variables */
+        /* Warm Organic Palette with Professional Cleanliness */
         :root {
-            --bg-dark: #121212;
-            --bg-card: #1e1e1e;
-            --accent-gold: #d4af37;
-            --text-light: #ffffff;
-            --text-muted: #b3b3b3;
-            --border-color: #333333;
+            --bg-cream: #fbf9f6;
+            --bg-card: #ffffff;
+            --terracotta: #b87355;
+            --terracotta-hover: #a25f43;
+            --sage-olive: #8a9a86;
+            --charcoal: #2c2a29;
+            --text-muted: #6e6a68;
+            --border-soft: #eae5df;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
 
         body {
-            background-color: var(--bg-dark);
-            color: var(--text-light);
+            background-color: var(--bg-cream);
+            color: var(--charcoal);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3 {
+            font-family: "Playfair Display", "Didot", "Georgia", serif;
+            font-weight: 500;
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
         }
 
         /* Navigation */
@@ -33,131 +46,197 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 5%;
-            border-bottom: 1px solid var(--border-color);
-            background-color: rgba(18, 18, 18, 0.95);
+            padding: 1.2rem 8%;
+            background-color: rgba(251, 249, 246, 0.95);
+            border-bottom: 1px solid var(--border-soft);
             position: sticky;
             top: 0;
             z-index: 100;
+            backdrop-filter: blur(5px);
         }
 
-        .logo-area {
-            display: flex;
-            align-items: center;
-        }
-
-        .logo-img {
-            height: 55px; /* Sized perfectly for the navigation bar */
+        .logo-area img {
+            height: 52px;
             width: auto;
             display: block;
             object-fit: contain;
         }
 
-        .nav-ln {
-            background-color: #0077b5;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 600;
+        .nav-links {
             display: flex;
             align-items: center;
-            gap: 8px;
-            transition: background-color 0.2s;
+            gap: 2rem;
         }
 
-        .nav-ln:hover {
+        .nav-links a {
+            color: var(--charcoal);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--terracotta);
+        }
+
+        .nav-ln-btn {
+            background-color: #0077b5;
+            color: white !important;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem !important;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .nav-ln-btn:hover {
             background-color: #005582;
         }
 
         /* Hero Section */
         .hero {
-            padding: 8rem 5% 6rem 5%;
-            text-align: center;
-            max-width: 900px;
+            padding: 6rem 8% 5rem 8%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            max-width: 1400px;
             margin: 0 auto;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 580px;
         }
 
         .hero h1 {
-            font-size: 3rem;
+            font-size: 3.2rem;
+            line-height: 1.15;
+            color: var(--charcoal);
             margin-bottom: 1.5rem;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-            line-height: 1.2;
         }
 
         .hero h1 span {
-            color: var(--accent-gold);
+            color: var(--terracotta);
+            font-style: italic;
         }
 
         .hero p {
-            font-size: 1.25rem;
+            font-size: 1.15rem;
             color: var(--text-muted);
             margin-bottom: 2.5rem;
         }
 
         .cta-btn {
-            background-color: var(--accent-gold);
-            color: var(--bg-dark);
-            padding: 0.8rem 2rem;
-            font-size: 1.1rem;
-            font-weight: 700;
+            background-color: var(--terracotta);
+            color: var(--bg-cream);
+            padding: 1rem 2.2rem;
+            font-size: 1rem;
+            font-weight: 600;
             text-decoration: none;
-            border-radius: 4px;
-            transition: transform 0.2s, background-color 0.2s;
+            border-radius: 30px;
+            transition: background-color 0.2s, transform 0.2s;
             display: inline-block;
+            box-shadow: 0 4px 15px rgba(184, 115, 85, 0.15);
         }
 
         .cta-btn:hover {
-            transform: translateY(-2px);
-            background-color: #f1c40f;
+            background-color: var(--terracotta-hover);
+            transform: translateY(-1px);
         }
 
-        /* Services Grid */
+        .hero-image-wrapper {
+            position: relative;
+        }
+
+        .hero-img {
+            width: 100%;
+            height: 480px;
+            object-fit: cover;
+            border-radius: 24px; /* Soft, organic look instead of rigid boxes */
+            box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+        }
+
+        /* Intro Statement / Hybrid Positioning */
+        .statement {
+            background-color: #f4f0ea;
+            padding: 4rem 8%;
+            text-align: center;
+            border-top: 1px solid var(--border-soft);
+            border-bottom: 1px solid var(--border-soft);
+        }
+
+        .statement-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .statement h2 {
+            font-size: 1.8rem;
+            color: var(--charcoal);
+            margin-bottom: 1rem;
+        }
+
+        .statement p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        /* Services Section */
         .services {
-            padding: 5rem 5%;
-            background-color: #181818;
-            border-top: 1px solid var(--border-color);
-            border-bottom: 1px solid var(--border-color);
+            padding: 6rem 8%;
+            max-width: 1400px;
+            margin: 0 auto;
         }
 
         .section-title {
             text-align: center;
-            font-size: 2rem;
-            margin-bottom: 3rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            font-size: 2.4rem;
+            margin-bottom: 3.5rem;
         }
 
         .section-title span {
-            color: var(--accent-gold);
+            color: var(--terracotta);
+            font-style: italic;
         }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
         }
 
         .card {
             background-color: var(--bg-card);
-            padding: 2.5rem 2rem;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-            transition: border-color 0.3s;
+            padding: 3rem 2rem;
+            border-radius: 24px;
+            border: 1px solid var(--border-soft);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
         }
 
         .card:hover {
-            border-color: var(--accent-gold);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.03);
+        }
+
+        .card-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #f4f0ea;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem auto;
+            color: var(--terracotta);
         }
 
         .card h3 {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             margin-bottom: 1rem;
-            color: var(--accent-gold);
+            color: var(--charcoal);
         }
 
         .card p {
@@ -165,18 +244,49 @@
             font-size: 0.95rem;
         }
 
-        /* Contact Form Wrapper */
-        .contact-section {
-            padding: 5rem 5%;
-            max-width: 600px;
+        /* Aesthetic Visual Panel (Public Domain Hybrid Images) */
+        .visual-panel {
+            padding: 2rem 8%;
+            max-width: 1400px;
             margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
         }
 
-        .form-container {
+        .panel-img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 24px;
+        }
+
+        /* Booking / Contact Form Section */
+        .contact-section {
+            padding: 6rem 8%;
+            background-color: #f4f0ea;
+            border-top: 1px solid var(--border-soft);
+        }
+
+        .contact-container {
+            max-width: 650px;
+            margin: 0 auto;
             background-color: var(--bg-card);
-            padding: 2.5rem;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
+            padding: 3.5rem 3rem;
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.04);
+        }
+
+        .contact-container h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-container p {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
         }
 
         .form-group {
@@ -188,46 +298,50 @@
             margin-bottom: 0.5rem;
             font-size: 0.9rem;
             font-weight: 600;
-            color: var(--text-muted);
+            color: var(--charcoal);
+            letter-spacing: 0.5px;
         }
 
         .form-group input, .form-group textarea, .form-group select {
             width: 100%;
-            padding: 0.8rem;
-            background-color: var(--bg-dark);
-            border: 1px solid var(--border-color);
-            color: var(--text-light);
-            border-radius: 4px;
+            padding: 0.9rem 1rem;
+            background-color: var(--bg-cream);
+            border: 1px solid var(--border-soft);
+            color: var(--charcoal);
+            border-radius: 12px;
             font-size: 1rem;
+            transition: border-color 0.2s;
         }
 
         .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
             outline: none;
-            border-color: var(--accent-gold);
+            border-color: var(--terracotta);
         }
 
         .submit-btn {
             width: 100%;
-            background-color: var(--accent-gold);
-            color: var(--bg-dark);
+            background-color: var(--terracotta);
+            color: var(--bg-cream);
             border: none;
-            padding: 1rem;
-            font-size: 1rem;
-            font-weight: 700;
-            border-radius: 4px;
+            padding: 1.1rem;
+            font-size: 1.05rem;
+            font-weight: 600;
+            border-radius: 30px;
             cursor: pointer;
             transition: background-color 0.2s;
+            margin-top: 1rem;
         }
 
         .submit-btn:hover {
-            background-color: #f1c40f;
+            background-color: var(--terracotta-hover);
         }
 
         /* Footer */
         footer {
-            padding: 3rem 5%;
+            padding: 4rem 8% 3rem 8%;
             text-align: center;
-            border-top: 1px solid var(--border-color);
+            background-color: var(--bg-cream);
+            border-top: 1px solid var(--border-soft);
             color: var(--text-muted);
             font-size: 0.9rem;
         }
@@ -236,24 +350,41 @@
             margin-bottom: 1.5rem;
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 2rem;
         }
 
         .footer-links a {
             color: var(--text-muted);
             text-decoration: none;
+            transition: color 0.2s;
         }
 
         .footer-links a:hover {
-            color: var(--accent-gold);
+            color: var(--terracotta);
         }
 
-        /* Mobile Adjustments */
-        @media (max-width: 768px) {
+        /* Responsive Layouts */
+        @media (max-width: 992px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 3rem;
+                padding-top: 4rem;
+            }
+            .hero-content {
+                margin: 0 auto;
+            }
+            .hero h1 { font-size: 2.8rem; }
+            .hero-img { height: 380px; }
+            .visual-panel { grid-template-columns: 1fr; }
+            .panel-img { height: 260px; }
+        }
+
+        @media (max-width: 576px) {
             header { padding: 1rem 5%; }
-            .logo-img { height: 45px; }
+            .nav-links a:not(.nav-ln-btn) { display: none; } /* Keeps layout clean on tiny screens */
+            .contact-container { padding: 2rem 1.5rem; }
             .hero h1 { font-size: 2.2rem; }
-            .form-container { padding: 1.5rem; }
         }
     </style>
 </head>
@@ -262,61 +393,90 @@
     <!-- Header / Navigation -->
     <header>
         <div class="logo-area">
-            <!-- Official Trays Up Logo Embedded Directly -->
-            <img src="https://scontent-ord5-3.xx.fbcdn.net/v/t39.30808-6/480593833_936577351968377_4440141344819044649_n.jpg?stp=dst-jpg_tt6&cstp=mx900x498&ctp=s900x498&_nc_cat=109&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=R3ZoFRK926sQ7kNvwE-Y_GL&_nc_oc=AdqyRJcjt7ALbd5gNa48pc68a6jCfVbGcpxPkwKDk2E-nXm1S-crKzahRhGnj3sdROM&_nc_zt=23&_nc_ht=scontent-ord5-3.xx&_nc_gid=RH7fzvol-UCTF9U6MaNwTQ&_nc_ss=7b2a8&oh=00_AQBbecO6-Pp9lfW3eltZBZ38s2RM4s9-GvFldzHPCaEBfQ&oe=6A52EC7C" alt="Trays Up Event Staffing Logo" class="logo-img">
+            <img src="https://scontent-ord5-3.xx.fbcdn.net/v/t39.30808-6/480593833_936577351968377_4440141344819044649_n.jpg?stp=dst-jpg_tt6&cstp=mx900x498&ctp=s900x498&_nc_cat=109&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=R3ZoFRK926sQ7kNvwE-Y_GL&_nc_oc=AdqyRJcjt7ALbd5gNa48pc68a6jCfVbGcpxPkwKDk2E-nXm1S-crKzahRhGnj3sdROM&_nc_zt=23&_nc_ht=scontent-ord5-3.xx&_nc_gid=RH7fzvol-UCTF9U6MaNwTQ&_nc_ss=7b2a8&oh=00_AQBbecO6-Pp9lfW3eltZBZ38s2RM4s9-GvFldzHPCaEBfQ&oe=6A52EC7C" alt="Trays Up Event Staffing Logo">
         </div>
-        <a href="https://www.linkedin.com/company/trays-up-event-staffing" target="_blank" class="nav-ln">
-            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                <path d="M0 1.146C0 .513.52 0 1.146 0h13.708C15.488 0 16 .513 16 1.146v13.708c0 .633-.513 1.146-1.146 1.146H1.146C.52 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
-            </svg>
-            LinkedIn
-        </a>
+        <div class="nav-links">
+            <a href="#services">Services</a>
+            <a href="#book">Inquire</a>
+            <a href="https://www.linkedin.com/company/trays-up-event-staffing" target="_blank" class="nav-ln-btn">
+                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16" style="vertical-align: middle;">
+                    <path d="M0 1.146C0 .513.52 0 1.146 0h13.708C15.488 0 16 .513 16 1.146v13.708c0 .633-.513 1.146-1.146 1.146H1.146C.52 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                </svg>
+                LinkedIn
+            </a>
+        </div>
     </header>
 
-    <!-- Hero / Intro -->
+    <!-- Hero Section -->
     <section class="hero">
-        <h1>Premium Hospitality Staffing for <span>Springfield & Branson</span></h1>
-        <p>From high-end corporate functions to private gala receptions, we provide polished, reliable, professional service crews that keep your operations running seamlessly.</p>
-        <a href="#book" class="cta-btn">Book Staff For Your Event</a>
+        <div class="hero-content">
+            <h1>Bespoke Hospitality Staffing for <span>Premier Events</span></h1>
+            <p>From structural corporate brand activations to beautifully curated social gatherings across Springfield & Branson. We bridge the gap between polished execution and effortless style.</p>
+            <a href="#book" class="cta-btn">Book Staff For Your Event</a>
+        </div>
+        <div class="hero-image-wrapper">
+            <!-- Unsplash Public Domain Image: Beautifully set outdoor hybrid event space -->
+            <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=800&q=80" alt="Premium Event Setup" class="hero-img">
+        </div>
+    </section>
+
+    <!-- Balanced Hybrid Positioning Statement -->
+    <section class="statement">
+        <div class="statement-inner">
+            <h2>Polished Logistics. Refined Presentation.</h2>
+            <p>Whether you are planning a high-impact corporate pop-up requiring strict timeline coordination, or a detailed private function centered around a meticulous aesthetic tone—our service captains, bartenders, and floor staff adapt seamlessly to your brand environment.</p>
+        </div>
     </section>
 
     <!-- Services Section -->
-    <section class="services">
-        <h2 class="section-title">Our <span>Services</span></h2>
+    <section class="services" id="services">
+        <h2 class="section-title">Our Service <span>Capabilities</span></h2>
         <div class="grid">
             <div class="card">
-                <h3>Professional Bartenders</h3>
-                <p>Mixologists skilled in high-volume settings, craft cocktail curation, and strict alcohol safety compliance.</p>
+                <div class="card-icon">🍸</div>
+                <h3>Artisanal Mixology</h3>
+                <p>Compliance-certified bartenders handling high-volume brand corporate events and precision craft beverage program curation alike.</p>
             </div>
             <div class="card">
-                <h3>Elite Service Teams</h3>
-                <p>Polished front-of-house banquet servers trained for synchronized fine dining plated service or seamless buffet maintenance.</p>
+                <h3>Front-of-House Teams</h3>
+                <p>Polished banquet servers trained for synchronized corporate luncheons or upscale, free-form cocktail receptions.</p>
             </div>
             <div class="card">
-                <h3>Event Captains</h3>
-                <p>Experienced site leads to manage floor logistics, coordinate timing with culinary crews, and lead the service team.</p>
+                <h3>Logistical Captains</h3>
+                <p>Experienced site leads managing backend timelines, kitchen-to-floor flow, and coordinating effortlessly with vendor networks.</p>
             </div>
             <div class="card">
-                <h3>Setup & Tear-Down</h3>
-                <p>Behind-the-scenes support to meticulously map out floor plans before guests arrive and restore spaces instantly post-event.</p>
+                <h3>Environmental Setup</h3>
+                <p>Complete deployment assets to meticulously build out floor layouts before operations begin and cleanly striking the site post-event.</p>
             </div>
         </div>
+    </section>
+
+    <!-- Dual Aesthetic Panel -->
+    <section class="visual-panel">
+        <!-- Image 1: Clean, high-end cocktail creation (appeals to high-end events and corporate cocktail mixers) -->
+        <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=600&q=80" alt="Professional Mixology" class="panel-img">
+        <!-- Image 2: Beautiful warm interior catering setup (appeals to the curated boho aesthetic) -->
+        <img src="https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=600&q=80" alt="Curated Catering Layout" class="panel-img">
     </section>
 
     <!-- Booking / Contact Form Section -->
     <section class="contact-section" id="book">
-        <h2 class="section-title">Booking <span>Inquiry</span></h2>
-        <div class="form-container">
+        <div class="contact-container">
+            <h2>Initiate Booking Inquiry</h2>
+            <p>Let us know your logistical parameters, and we will custom-tailor a hospitality panel to match your scope.</p>
+            
+            <!-- Web3Forms Configured to route immediately to contact@traysupevents.com -->
             <form action="https://api.web3forms.com/submit" method="POST">
                 
-                <!-- Just remember to swap out YOUR_ACCESS_KEY_HERE with your free key from web3forms.com -->
-                <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-                <input type="hidden" name="subject" value="New Event Staffing Booking Inquiry">
-                <input type="checkbox" name="botcheck" id="" style="display: none;">
+                <input type="hidden" name="access_key" value="67fae3f1-bd2f-48d6-bd6a-05a96078bf0c">
+                <input type="hidden" name="subject" value="New Trays Up Booking Inquiry">
+                <input type="hidden" name="to" value="contact@traysupevents.com">
+                <input type="checkbox" name="botcheck" style="display: none;">
 
                 <div class="form-group">
-                    <label for="name">Contact Name / Company</label>
-                    <input type="text" id="name" name="name" required placeholder="John Doe / Company Name">
+                    <label for="name">Contact Name / Organization</label>
+                    <input type="text" id="name" name="name" required placeholder="e.g., Jane Doe / Enterprise Corp">
                 </div>
                 <div class="form-group">
                     <label for="email">Email Address</label>
@@ -327,19 +487,28 @@
                     <input type="date" id="date" name="event_date" required>
                 </div>
                 <div class="form-group">
-                    <label for="location">Event Location</label>
-                    <select id="location" name="location" required>
-                        <option value="" disabled selected>Select location...</option>
-                        <option value="Branson">Branson Area</option>
-                        <option value="Springfield">Springfield Area</option>
-                        <option value="Other">Other (SW Missouri)</option>
+                    <label for="format">Event Format</label>
+                    <select id="format" name="event_format" required>
+                        <option value="" disabled selected>Select event format...</option>
+                        <option value="Corporate/Activation">Corporate Function / Pop-Up Activation</option>
+                        <option value="Private/Social">Private Social Gathering / Gala</option>
+                        <option value="Other">Other Event Environment</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="details">Event Details & Staffing Requirements</label>
-                    <textarea id="details" name="message" rows="5" required placeholder="Tell us about your event format, estimated guest count, and what specific staffing roles you need filled..."></textarea>
+                    <label for="location">Market Area</label>
+                    <select id="location" name="location" required>
+                        <option value="" disabled selected>Select region...</option>
+                        <option value="Branson">Branson Metro Area</option>
+                        <option value="Springfield">Springfield Metro Area</option>
+                        <option value="Other">Other Southwest Missouri Region</option>
+                    </select>
                 </div>
-                <button type="submit" class="submit-btn">Submit Request</button>
+                <div class="form-group">
+                    <label for="details">Logistical Details & Staffing Requirements</label>
+                    <textarea id="details" name="message" rows="5" required placeholder="Please outline the layout format, estimated guest volume, and requested crew segments (Bartenders, Servers, Setup)..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit Booking Request</button>
             </form>
         </div>
     </section>
@@ -347,6 +516,7 @@
     <!-- Footer -->
     <footer>
         <div class="footer-links">
+            <a href="#services">Services Capabilities</a>
             <a href="https://www.linkedin.com/company/trays-up-event-staffing" target="_blank">Connect on LinkedIn</a>
         </div>
         <p>&copy; 2026 Trays Up Event Staffing. All rights reserved.</p>
@@ -354,4 +524,3 @@
 
 </body>
 </html>
-
