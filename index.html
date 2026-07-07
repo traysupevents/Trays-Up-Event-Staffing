@@ -158,29 +158,88 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.06);
         }
 
-        /* Intro Statement / Hybrid Positioning */
-        .statement {
-            background-color: #f4f0ea;
-            padding: 4rem 8%;
-            text-align: center;
+        /* Anti-Broker Comparison Section */
+        .comparison-section {
+            background-color: #ffffff;
+            padding: 6rem 8%;
             border-top: 1px solid var(--border-soft);
             border-bottom: 1px solid var(--border-soft);
         }
 
-        .statement-inner {
-            max-width: 800px;
+        .comp-container {
+            max-width: 1100px;
             margin: 0 auto;
         }
 
-        .statement h2 {
-            font-size: 1.8rem;
-            color: var(--charcoal);
+        .comp-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .comp-header h2 {
+            font-size: 2.4rem;
             margin-bottom: 1rem;
         }
 
-        .statement p {
-            color: var(--text-muted);
-            font-size: 1.1rem;
+        .comp-header h2 span {
+            color: var(--terracotta);
+            font-style: italic;
+        }
+
+        .comp-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .comp-box {
+            padding: 2.5rem;
+            border-radius: 24px;
+        }
+
+        .comp-box.broker {
+            background-color: #fcfbf9;
+            border: 1px dashed #d1c9c0;
+        }
+
+        .comp-box.traysup {
+            background-color: #f4f0ea;
+            border: 1px solid var(--terracotta);
+        }
+
+        .comp-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .comp-box ul {
+            list-style: none;
+        }
+
+        .comp-box li {
+            margin-bottom: 1rem;
+            position: relative;
+            padding-left: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .comp-box.broker li::before {
+            content: "✕";
+            color: #c0392b;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .comp-box.traysup li::before {
+            content: "✓";
+            color: var(--terracotta);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
         }
 
         /* Services Section */
@@ -376,6 +435,7 @@
             }
             .hero h1 { font-size: 2.8rem; }
             .hero-img { height: 380px; }
+            .comp-grid { grid-template-columns: 1fr; }
             .visual-panel { grid-template-columns: 1fr; }
             .panel-img { height: 260px; }
         }
@@ -396,6 +456,7 @@
             <img src="https://scontent-ord5-3.xx.fbcdn.net/v/t39.30808-6/480593833_936577351968377_4440141344819044649_n.jpg?stp=dst-jpg_tt6&cstp=mx900x498&ctp=s900x498&_nc_cat=109&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=R3ZoFRK926sQ7kNvwE-Y_GL&_nc_oc=AdqyRJcjt7ALbd5gNa48pc68a6jCfVbGcpxPkwKDk2E-nXm1S-crKzahRhGnj3sdROM&_nc_zt=23&_nc_ht=scontent-ord5-3.xx&_nc_gid=RH7fzvol-UCTF9U6MaNwTQ&_nc_ss=7b2a8&oh=00_AQBbecO6-Pp9lfW3eltZBZ38s2RM4s9-GvFldzHPCaEBfQ&oe=6A52EC7C" alt="Trays Up Event Staffing Logo">
         </div>
         <div class="nav-links">
+            <a href="#advantage">Our Advantage</a>
             <a href="#services">Capabilities</a>
             <a href="#book">Inquire</a>
             <a href="https://www.linkedin.com/company/trays-up-event-staffing" target="_blank" class="nav-ln-btn">
@@ -410,47 +471,69 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Brand Activations with an <span>Artsy Soul</span></h1>
-            <p>We are a down-to-earth collective of brand ambassadors and field specialists blending high-stakes pop-up logistics with an effortless, creative aesthetic. When it's time to take your products to the public, we bring the style, the energy, and the flawless execution.</p>
+            <h1>Experiential Event Staffing with an <span>Artsy Soul</span></h1>
+            <p>We are a localized collective of brand ambassadors and field specialists blending high-stakes pop-up logistics with an effortless, creative aesthetic. Stop guessing with faceless national broker databases. We bring real life, soul, and flawless execution to your brand's footprint.</p>
             <a href="#book" class="cta-btn">Launch Your Activation</a>
         </div>
         <div class="hero-image-wrapper">
-            <!-- Sleek, modern, lit experiential geometric glass architecture at dusk -->
-            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Experiential Brand Pop-Up Space" class="hero-img">
+            <!-- High-energy, sleek modern event structure with incredible crowd lighting -->
+            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80" alt="High-Energy Experiential Event Activation" class="hero-img">
         </div>
     </section>
 
-    <!-- Balanced Hybrid Positioning Statement -->
-    <section class="statement">
-        <div class="statement-inner">
-            <h2>Serving Up Your Identity. Zero Pretension.</h2>
-            <p>Trays Up was built on a simple premise: a brand's physical footprint should be memorable, authentic, and perfectly synchronized. From major regional corporate launch campaigns to bespoke private experiences, we deploy curated field teams that represent your identity seamlessly.</p>
+    <!-- The Anti-Broker Advantage Section -->
+    <section class="comparison-section" id="advantage">
+        <div class="comp-container">
+            <div class="comp-header">
+                <h2>The Local <span>Collective</span> Advantage</h2>
+                <p>Why modern brand managers are ditching algorithmic national apps for curated field teams.</p>
+            </div>
+            <div class="comp-grid">
+                <div class="comp-box broker">
+                    <h3>⚠️ National App Brokers</h3>
+                    <ul>
+                        <li>Nameless, faceless database algorithms choosing random gig workers.</li>
+                        <li>Zero local market accountability or regional community connection.</li>
+                        <li>High no-show rates and unbriefed staff staring at their phones.</li>
+                        <li>Sterile, robotic presentation that detaches from your brand's vibe.</li>
+                    </ul>
+                </div>
+                <div class="comp-box traysup">
+                    <h3>⚡ Trays Up Field Collective</h3>
+                    <ul>
+                        <li>A hand-picked, tight-knit local roster that completely trusts each other.</li>
+                        <li>Deep, organic familiarity with the Springfield, Branson, and NWA spaces.</li>
+                        <li>Pre-event briefings to memorize your brand deliverables and product facts.</li>
+                        <li>Articulate, down-to-earth creative professionals who inject genuine life.</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Capabilities Section -->
     <section class="services" id="services">
         <h2 class="section-title">Activation <span>Capabilities</span></h2>
         <div class="grid">
             <div class="card">
                 <div class="card-icon">⚡</div>
                 <h3>Brand Ambassadors</h3>
-                <p>Articulate, engaging field specialists trained to communicate product features, manage experiential activations, and generate genuine consumer buzz.</p>
+                <p>Articulate, magnetic field specialists deployed to staff product booths, execute massive sampling campaigns, and drive audience interactions at major trade shows or expos.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🎮</div>
+                <h3>Esports & Festival Footprints</h3>
+                <p>High-energy, tech-savvy crews optimized to represent major sponsors, distribute free merchandise, and keep pace with massive tournament or concert crowds.</p>
             </div>
             <div class="card">
                 <div class="card-icon">🍸</div>
                 <h3>Brand Mixology</h3>
-                <p>Compliance-certified bartenders handling high-volume custom product mixers, mobile pop-up bars, and curated artisanal cocktail menus.</p>
-            </div>
-            <div class="card">
-                <div class="card-icon">🎯</div>
-                <h3>Experiential Hosts</h3>
-                <p>Polished front-of-house staff tailored for media previews, regional brand pop-ups, corporate VIP lounges, and gala environments.</p>
+                <p>Compliance-certified, highly stylized bartenders executing specialized media preview mixers, custom pop-up spaces, and artisanal brand cocktail menus.</p>
             </div>
             <div class="card">
                 <div class="card-icon">🛠️</div>
                 <h3>Pop-Up Operations</h3>
-                <p>Behind-the-scenes logistical support to map out physical venues, coordinate footprint construction, and cleanly strike the site post-activation.</p>
+                <p>Reliable boots on the ground to manage venue layouts, build physical experiential setups before doors open, and execute clean, immediate site strikes.</p>
             </div>
         </div>
     </section>
@@ -459,8 +542,8 @@
     <section class="visual-panel">
         <!-- Close up high-end sleek mixology and glassware -->
         <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=600&q=80" alt="Precision Brand Mixology" class="panel-img">
-        <!-- Vibrant, stylish indoor experiential brand lounge / network gathering -->
-        <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=600&q=80" alt="Experiential Product Launch Atmosphere" class="panel-img">
+        <!-- Vibrant, packed indoor experiential live arena activation atmosphere -->
+        <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=600&q=80" alt="Experiential Gaming and Festival Activation" class="panel-img">
     </section>
 
     <!-- Booking / Contact Form Section -->
@@ -470,10 +553,11 @@
             <p>Outline your logistical parameters below, and we will custom-build a team of brand specialists to execute your scope.</p>
             
             <!-- Web3Forms Configured to route immediately to contact@traysupevents.com -->
-           <form action="https://api.web3forms.com/submit" method="POST">
-    <input type="hidden" name="access_key" value="7ef15013-ae3c-40ec-b94f-15a07207649f">
+            <form action="https://api.web3forms.com/submit" method="POST">
+                
+                <input type="hidden" name="access_key" value="67fae3f1-bd2f-48d6-bd6a-05a96078bf0c">
                 <input type="hidden" name="subject" value="New Trays Up Activation Inquiry">
-                <input type="hidden" name="email" value="contact@traysupevents.com">
+                <input type="hidden" name="to" value="contact@traysupevents.com">
                 <input type="checkbox" name="botcheck" style="display: none;">
 
                 <div class="form-group">
@@ -492,6 +576,7 @@
                     <label for="format">Activation Format</label>
                     <select id="format" name="event_format" required>
                         <option value="" disabled selected>Select format...</option>
+                        <option value="Esports / Festival / Tournament Booth">Esports / Festival / Tournament Footprint</option>
                         <option value="Product Launch / Pop-Up">Product Launch / Pop-Up Activation</option>
                         <option value="Corporate Event / VIP Space">Corporate Function / VIP Hospitality</option>
                         <option value="Private Social / Gala">Private Social Gala / Curated Gathering</option>
@@ -518,6 +603,7 @@
     <!-- Footer -->
     <footer>
         <div class="footer-links">
+            <a href="#advantage">Our Advantage</a>
             <a href="#services">Activation Capabilities</a>
             <a href="https://www.linkedin.com/company/trays-up-event-staffing" target="_blank">Connect on LinkedIn</a>
         </div>
