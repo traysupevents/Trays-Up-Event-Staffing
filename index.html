@@ -36,12 +36,10 @@
             font-weight: 500;
         }
 
-        /* Smooth Scrolling */
         html {
             scroll-behavior: smooth;
         }
 
-        /* Navigation */
         header {
             display: flex;
             justify-content: space-between;
@@ -55,13 +53,13 @@
             backdrop-filter: blur(5px);
         }
 
-.logo-area img {
-    height: 52px;
-    width: auto;
-    display: block;
-    object-fit: contain;
-    mix-blend-mode: multiply;
-}
+        .logo-area img {
+            height: 52px;
+            width: auto;
+            display: block;
+            object-fit: contain;
+            mix-blend-mode: multiply;
+        }
 
         .nav-links {
             display: flex;
@@ -96,7 +94,6 @@
             background-color: #005582;
         }
 
-        /* Hero Section */
         .hero {
             padding: 6rem 8% 5rem 8%;
             display: grid;
@@ -159,7 +156,6 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.06);
         }
 
-        /* Anti-Broker Comparison Section */
         .comparison-section {
             background-color: #ffffff;
             padding: 6rem 8%;
@@ -243,7 +239,6 @@
             font-weight: bold;
         }
 
-        /* Services Section */
         .services {
             padding: 6rem 8%;
             max-width: 1400px;
@@ -304,24 +299,6 @@
             font-size: 0.95rem;
         }
 
-        /* Aesthetic Visual Panel */
-        .visual-panel {
-            padding: 2rem 8%;
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
-
-        .panel-img {
-            width: 100%;
-            height: 340px;
-            object-fit: cover;
-            border-radius: 24px;
-        }
-
-        /* Booking / Contact Form Section */
         .contact-section {
             padding: 6rem 8%;
             background-color: #f4f0ea;
@@ -362,7 +339,9 @@
             letter-spacing: 0.5px;
         }
 
-        .form-group input, .form-group textarea, .form-group select {
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
             width: 100%;
             padding: 0.9rem 1rem;
             background-color: var(--bg-cream);
@@ -373,7 +352,9 @@
             transition: border-color 0.2s;
         }
 
-        .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
             outline: none;
             border-color: var(--terracotta);
         }
@@ -396,7 +377,6 @@
             background-color: var(--terracotta-hover);
         }
 
-        /* Footer */
         footer {
             padding: 4rem 8% 3rem 8%;
             text-align: center;
@@ -423,22 +403,12 @@
             color: var(--terracotta);
         }
 
-        /* Responsive Layouts */
         @media (max-width: 992px) {
-            .hero {
-                grid-template-columns: 1fr;
-                text-align: center;
-                gap: 3rem;
-                padding-top: 4rem;
-            }
-            .hero-content {
-                margin: 0 auto;
-            }
+            .hero { grid-template-columns: 1fr; text-align: center; gap: 3rem; padding-top: 4rem; }
+            .hero-content { margin: 0 auto; }
             .hero h1 { font-size: 2.8rem; }
             .hero-img { height: 380px; }
             .comp-grid { grid-template-columns: 1fr; }
-            .visual-panel { grid-template-columns: 1fr; }
-            .panel-img { height: 260px; }
         }
 
         @media (max-width: 576px) {
@@ -451,10 +421,9 @@
 </head>
 <body>
 
-    <!-- Header / Navigation -->
     <header>
         <div class="logo-area">
-<img src="Trays%20Up%20logo%20white%20back.jpeg" alt="Trays Up Event Staffing Logo">
+            <img src="Trays%20Up%20logo%20white%20back.jpeg" alt="Trays Up Event Staffing Logo">
         </div>
         <div class="nav-links">
             <a href="#advantage">Our Advantage</a>
@@ -463,26 +432,22 @@
             <a href="https://www.linkedin.com/company/trays-up-event-staffing" target="_blank" class="nav-ln-btn">
                 <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16" style="vertical-align: middle;">
                     <path d="M0 1.146C0 .513.52 0 1.146 0h13.708C15.488 0 16 .513 16 1.146v13.708c0 .633-.513 1.146-1.146 1.146H1.146C.52 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
-                </svg>
-                LinkedIn
+                </svg> LinkedIn
             </a>
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
             <h1>Experiential Event Staffing with an <span>Artsy Soul</span></h1>
-            <p>We are a localized collective of brand ambassadors and field specialists blending high-stakes pop-up logistics with an effortless, creative aesthetic. Stop guessing with faceless national broker databases. We bring real life, soul, and flawless execution to your brand's footprint.</p>
+            <p>We are a localized collective of brand ambassadors and field specialists blending high-stakes pop-up logistics with an effortless, creative aesthetic. Stop guessing with faceless national broker databases. We bring real life, soul, and flawless execution to your brand's footprint across our core Ozarks market and select regional deployments.</p>
             <a href="#book" class="cta-btn">Launch Your Activation</a>
         </div>
         <div class="hero-image-wrapper">
-            <!-- High-energy, sleek modern event structure with incredible crowd lighting -->
             <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80" alt="High-Energy Experiential Event Activation" class="hero-img">
         </div>
     </section>
 
-    <!-- The Anti-Broker Advantage Section -->
     <section class="comparison-section" id="advantage">
         <div class="comp-container">
             <div class="comp-header">
@@ -503,7 +468,7 @@
                     <h3>⚡ Trays Up Field Collective</h3>
                     <ul>
                         <li>A hand-picked, tight-knit local roster that completely trusts each other.</li>
-                        <li>Deep, organic familiarity with the Springfield, Branson, and NWA spaces.</li>
+                        <li>Deep familiarity with Springfield, Branson, and NWA—plus full mobility for regional travel scope.</li>
                         <li>Pre-event briefings to memorize your brand deliverables and product facts.</li>
                         <li>Articulate, down-to-earth creative professionals who inject genuine life.</li>
                     </ul>
@@ -512,7 +477,6 @@
         </div>
     </section>
 
-    <!-- Capabilities Section -->
     <section class="services" id="services">
         <h2 class="section-title">Activation <span>Capabilities</span></h2>
         <div class="grid">
@@ -539,76 +503,71 @@
         </div>
     </section>
 
-    <!-- Dual Aesthetic Panel -->
-    <section class="visual-panel">
-        <!-- Close up high-end sleek mixology and glassware -->
-        <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=600&q=80" alt="Precision Brand Mixology" class="panel-img">
-        <!-- Vibrant, packed indoor experiential live arena activation atmosphere -->
-        <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=600&q=80" alt="Experiential Gaming and Festival Activation" class="panel-img">
-    </section>
-
-    <!-- Booking / Contact Form Section -->
     <section class="contact-section" id="book">
         <div class="contact-container">
-            <h2>Launch An Activation</h2>
-            <p>Outline your logistical parameters below, and we will custom-build a team of brand specialists to execute your scope.</p>
-            
-            <!-- Web3Forms Configured to route immediately to contact@traysupevents.com -->
+            <h2>Launch Your Activation</h2>
+            <p>Tell us about your brand footprint, timeline, and staffing scope—whether in our primary hubs or a regional deployment—and we'll build a custom team.</p>
+
             <form action="https://api.web3forms.com/submit" method="POST">
-                
-               <input type="hidden" name="access_key" value="7ef15013-ae3c-40ec-b94f-15a07207649f">
+                <input type="hidden" name="access_key" value="7ef15013-ae3c-40ec-b94f-15a07207649f">
                 <input type="hidden" name="subject" value="New Trays Up Activation Inquiry">
-                <input type="hidden" name="to" value="contact@traysupevents.com">
-                <input type="checkbox" name="botcheck" style="display: none;">
+                <input type="hidden" name="from_name" value="Trays Up Web Contact">
 
                 <div class="form-group">
-                    <label for="name">Contact Name / Corporate Agency</label>
-                    <input type="text" id="name" name="name" required placeholder="e.g., Jane Doe / Marketing Firm">
+                    <label for="agency_name">Agency / Brand Name</label>
+                    <input type="text" id="agency_name" name="agency_name" required placeholder="e.g. Red Antler / Oatly">
                 </div>
+
                 <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required placeholder="name@domain.com">
+                    <label for="email">Work Email</label>
+                    <input type="email" id="email" name="email" required placeholder="name@company.com">
                 </div>
+
                 <div class="form-group">
-                    <label for="date">Activation / Event Date</label>
-                    <input type="date" id="date" name="event_date" required>
+                    <label for="event_date">Activation / Event Date</label>
+                    <input type="date" id="event_date" name="event_date" required>
                 </div>
+
                 <div class="form-group">
                     <label for="format">Activation Format</label>
-                    <select id="format" name="event_format" required>
-                        <option value="" disabled selected>Select format...</option>
-                        <option value="Esports / Festival / Tournament Booth">Esports / Festival / Tournament Footprint</option>
-                        <option value="Product Launch / Pop-Up">Product Launch / Pop-Up Activation</option>
-                        <option value="Corporate Event / VIP Space">Corporate Function / VIP Hospitality</option>
-                        <option value="Private Social / Gala">Private Social Gala / Curated Gathering</option>
+                    <select id="format" name="format" required>
+                        <option value="" disabled selected>Select Activation Style</option>
+                        <option value="Product Launch / Pop-Up Activation">Product Launch / Pop-Up Activation</option>
+                        <option value="Trade Show / Expo Footprint">Trade Show / Expo Footprint</option>
+                        <option value="Festival / Gaming / Esports Event">Festival / Gaming / Esports Event</option>
+                        <option value="VIP Private Mixer / Brand Hospitality">VIP Private Mixer / Brand Hospitality</option>
                     </select>
                 </div>
+
                 <div class="form-group">
-                    <label for="location">Target Market</label>
-                    <select id="location" name="location" required>
-                        <option value="" disabled selected>Select region...</option>
-                        <option value="Branson">Branson Metro Region</option>
-                        <option value="Springfield">Springfield Metro Region</option>
-                        <option value="NWA">Northwest Arkansas (Fayetteville/Bentonville)</option>
+                    <label for="target_market">Target Market / Location</label>
+                    <select id="target_market" name="target_market" required>
+                        <option value="" disabled selected>Select Target Region</option>
+                        <option value="Branson Metro Region">Branson Metro Region</option>
+                        <option value="Springfield Metro Region">Springfield Metro Region</option>
+                        <option value="Northwest Arkansas (NWA)">Northwest Arkansas (Bentonville / Fayetteville)</option>
+                        <option value="Other Regional Scope">Other / Regional Fly-In & Travel Scope</option>
                     </select>
                 </div>
+
                 <div class="form-group">
-                    <label for="details">Activation Scope & Team Requirements</label>
-                    <textarea id="details" name="message" rows="5" required placeholder="Please outline your activation layout, estimated audience reach, and requested personnel segments (Brand Ambassadors, Mixologists, Setup Crew)..."></textarea>
+                    <label for="requirements">Activation Scope & Team Requirements</label>
+                    <textarea id="requirements" name="requirements" rows="4" required placeholder="Describe team sizes needed, roles (BAs, Mixologists, Site Techs), and key deliverables..."></textarea>
                 </div>
+
                 <button type="submit" class="submit-btn">Submit Campaign Request</button>
             </form>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="footer-links">
             <a href="#advantage">Our Advantage</a>
-            <a href="#services">Activation Capabilities</a>
-            <a href="https://www.linkedin.com/company/trays-up-event-staffing" target="_blank">Connect on LinkedIn</a>
+            <a href="#services">Capabilities</a>
+            <a href="#book">Inquire</a>
+            <a href="https://www.linkedin.com/company/trays-up-event-staffing" target="_blank">LinkedIn</a>
         </div>
-        <p>&copy; 2026 Trays Up Event Staffing. All rights reserved.</p>
+        <p>&copy; 2026 Trays Up Event Staffing. All rights reserved. | High-Touch Experiential Execution</p>
     </footer>
 
 </body>
